@@ -1,0 +1,220 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+/*Overpass*/
+
+/* --- */
+
+/*Variables*/
+:root {
+    --main-accent: #D2042D;
+    /*Cherry Red*/
+    --main-accent2: #DC143C;
+    /*Crimson Red*/
+    --main-accent3: #FF3131;
+    /*Neon Red*/
+    --sub-accent: #36454F;
+    /*Charcoal Black*/
+    --sub-accent2: #28282B;
+    /*Matte Black*/
+    --sub-accent3: #343434;
+    /*Jet Black*/
+}
+
+/* --- */
+
+/*Animations*/
+
+/*Blur out*/
+@keyframes blur{
+    0%{
+        filter: opacity(0%);
+    }
+    50%{
+        filter: opacity(0%);
+    }
+    75%{
+        filter: opacity(0%);
+    }
+    100%{
+        filter: opacity(100%);
+    }
+    
+}
+/*---*/
+
+/*Main styling*/
+
+* {
+    box-sizing: border-box;
+    font-family: Overpass;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        90deg,
+        var(--main-accent),
+        var(--main-accent2),
+        var(--main-accent3)
+    );
+}
+
+#head {
+    background-color: var(--sub-accent3);
+    color: rgb(255, 255, 255);
+    min-height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#about-website-1 {
+    font-size: 1em;
+    position: fixed;
+    top: 15px;
+    left: 5px;
+}
+
+#personal-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#profile-photo {
+    height: 3em;
+    aspect-ratio: 1;
+    transition: all 0.5s;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#name {
+    font-size: 1em;
+    margin: 0 10px;
+}
+
+#profile-photo:hover {
+    transform: scale(1.2);
+}
+
+#welcome{
+    text-align: center;
+    font-family: overpass;
+    font-size: 3em;
+    padding-top: 100px;
+    color: rgb(255, 255, 255);
+}
+
+#after-auto-type{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    margin: 40px 0px;
+    animation: blur 10s 1 ease-in;
+}
+
+#one{
+    height: 100vh;
+}
+
+#about-text{
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+    font-family: calibri;
+    font-style: italic;
+}
+
+#intro{
+    text-align: center;
+    color: white;
+    font-size: 1.25em;
+}
+
+#projects{
+    display: inline-grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr) ;
+    width: 100vw;
+
+}
+
+.project-image{
+    height: 400px;
+    width: 400px;
+    border: solid 2px var(--sub-accent2);
+    transition: all 0.5s;
+}
+
+/*From Stack Overflow*/
+figure {
+    display: inline-block;
+    margin: 30px; /* adjust as needed */
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    text-align: center;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+
+.project-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: all 1s;
+}
+
+.project-image:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 0px 50px 20px rgba(40,40,43,0.75);
+}
+
+@media (max-width:900px) {
+    .project-image{
+        height: 500px;
+        width: 600px;
+    }
+    figure figcaption{
+        font-size: 1.8em;
+    }
+    #projects{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    
+}
+@media (max-width:750px) {
+    .project-image{
+        height: 350px;
+        width: 300px;
+    }
+    figure figcaption{
+        font-size: 1.5em;
+    }
+    .project-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #projects{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    
+}
+a{
+    text-decoration: none;
+}
+
+
+/*---*/

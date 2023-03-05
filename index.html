@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Potofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <head>
+        <div id="head">
+            <div id="about-website">
+                <div id="about-website-1">
+                    Personal Photofolio
+                </div>
+            </div>
+            <div id="personal-info">
+                <img src="./assetts/images/profile-photo.png" alt="profile photo" id="profile-photo">
+                <div id="name">Tushar</div>
+            </div>
+        </div>
+    </head>
+
+    <main>
+        <section id="one">
+            <div id="main">
+                <div id="welcome"><span class="auto-type">Welcome</span></div>
+                <div id="after-auto-type">
+                    I'm Tushar
+                </div>
+
+                <div id="about">
+                    <div id="about-text">
+                        This is my personal portfolio project
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="two">
+            <div id="intro">
+                These are some of my projects<br>(click to access)
+            </div>
+            <div id="projects">
+                <figure>
+                <a target = "_blank" href="https://Weather-App.tusharbajpai.repl.co">
+                <div id="project-1" class="project-container">
+                    <img src="./assetts/images/weather-app-project.png" alt="A weather web app's image" id="project-1-img" class="project-image">
+                    <figcaption id="project-1-caption">Weather App By City Name</figcaption>
+                </div>
+                </a>
+                </figure>
+                <figure>
+                <a target="_blank" href="https://Random-Quote-Generator.tusharbajpai.repl.co">
+                <div id="project-2" class="project-container">
+                    <img src="./assetts/images/Random-quote-generator.png" alt="A random quote generator web app's image" id="project-2-img" class="project-image">
+                    <figcaption id="project-2-caption">Random Quote Generator</figcaption>
+                </div>
+                </a>
+                </figure>
+                <figure>
+                <a target="_blank" href="https://Number-Guessing-Game.tusharbajpai.repl.co">
+                <div id="project-3" class="project-container">
+                    <img src="./assetts/images/number-guessing-game.png" alt="A number guessing game's image" id="project-3-img" class="project-image">
+                    <figcaption id="project-3-caption">Number Guessing Game</figcaption>
+                </div>
+                </a>
+                </figure>
+                <figure>
+                <a target='_blank' href="https://Temperature-Converter.tusharbajpai.repl.co">
+                <div id="project-4" class="project-container">
+                    <img src="./assetts/images/Temperature-converter.png" alt="A Temperature converter app's image" id="project-4-img" class="project-image">
+                    <figcaption id="project-4-caption">Temperature Converter App</figcaption>
+                </div>
+                </a>
+                </figure>
+            
+            </div>
+        </section>
+    </main>
+
+
+</body>
+<!--Main script-->
+<script src="script.js"></script>
+
+<!--Typed js-->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".auto-type", {
+        strings: ["Welcome" , "I'm Tushar" , "Welcome"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: false
+    })
+</script>
+
+</html>
